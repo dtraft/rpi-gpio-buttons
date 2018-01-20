@@ -37,7 +37,7 @@ module.exports = function (pins, options) {
   
   //Allow passing in GPIO Mode
   if(options.MODE_BCM){
-    gpio.setMode(options.MODE_BCM)
+    gpio.setMode(gpio.MODE_BCM)
   }
 
   // setup each pin as a button input
