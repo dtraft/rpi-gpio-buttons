@@ -34,6 +34,11 @@ module.exports = function (pins, options) {
     pressed: options.pressed || PRESSED_MS,
     clicked: options.clicked || CLICKED_MS
   };
+  
+  //Allow passing in GPIO Mode
+  if(options.MODE_BCM){
+    gpio.setMode(options.MODE_BCM)
+  }
 
   // setup each pin as a button input
   pins.forEach(function (pin) {
